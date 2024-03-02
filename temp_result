@@ -1,0 +1,3 @@
+./helm/benchmark_output/runs/xsum_llama2-7b-32k_0.4_40_result/groups/latex/core_scenarios_accuracy.tex : 0.08823987035115326
+./helm/benchmark_output/runs/xsum_llama2-7b-32k_0.4_25_result/groups/latex/core_scenarios_accuracy.tex : 0.08848510705107047
+./helm/benchmark_output/runs/xsum_llama2-7b-32k_0.4_25_result/groups/latex/core_scenarios_accuracy.tex : 0.1223294657638518

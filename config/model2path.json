@@ -1,0 +1,4 @@
+{
+    "Mistral": "/home/user/.cache/huggingface/hub/Mistral",
+    "llama2-7b-32k": "/home/user/.cache/huggingface/hub/llama2-7B-32k"
+}
