@@ -101,6 +101,15 @@ Before you run the experiments, please modify `config/model2path.json` to provid
    ```bash
    sh helm.sh
    ```
-
-
+## Cite SqueezeAttention
+```
+@inproceedings{wang2024squeezeattention,
+title={SqueezeAttention: 2D Management of KV-Cache in LLM Inference via Layer-wise Optimal Budget},
+author={Zihao Wang and Shaoduo Gan},
+year={2024},
+eprint={2404.04793},
+archivePrefix={arXiv},
+primaryClass={cs.LG}
+}
+```
 
