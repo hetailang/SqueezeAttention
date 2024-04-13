@@ -17,6 +17,7 @@ Optimizing the Key-Value (KV) cache of the Large Language Model (LLM) has been c
 Use the following command to install dependencies.
 
 ```bash
+pip install crfm-helm
 pip install -r requirements.txt
 ```
 
