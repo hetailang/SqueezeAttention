@@ -18,6 +18,7 @@ Use the following command to install dependencies.
 
 ```bash
 pip install crfm-helm
+# cuda >= 11.6
 pip install -r requirements.txt
 ```
 
