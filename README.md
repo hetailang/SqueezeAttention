@@ -38,7 +38,7 @@ python modify_transformers.py
 
 ## Usage and Example
 
-We provide two dataset(**samsum** from [LongBench](https://github.com/THUDM/LongBench) and **xsum** from [HELM](https://crfm.stanford.edu/helm/latest/)) and two models(**Mistral** and **LLama2-7b-32k**) as examples. You can also use LLama of other sizes.
+We provide two dataset(**samsum** from [LongBench](https://github.com/THUDM/LongBench) and **xsum** from [HELM](https://crfm.stanford.edu/helm/latest/)) and two models([**Mistral**](https://huggingface.co/mistralai/Mistral-7B-v0.1/tree/main) and [**LLama2-7b-32k**](https://huggingface.co/togethercomputer/LLaMA-2-7B-32K) as examples. You can also use LLama of other sizes.
 
 Before you run the experiments, please modify `config/model2path.json` to provide correct path of your models based on you machines.
 
