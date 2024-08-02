@@ -5,3 +5,6 @@ torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu121
 accelerate
 datasets
 scikit-learn
+jieba
+fuzzywuzzy
+rouge
