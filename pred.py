@@ -199,7 +199,7 @@ def get_data_and_outpath(args, model_name, dataset):
                 if line.strip() != '':
                     data.append(json.loads(line))
     else:
-        data = load_dataset('/home/user/.cache/huggingface/datasets/longbench/LongBench.py', dataset, split='test')
+        data = load_dataset('THUDM/LongBench', dataset, split='test')
 
     if not os.path.exists(f"pred_{args.pred}/{model_name}/{args.ini_size}/{int(args.KV_class3 * 100)}"):
         os.makedirs(f"pred_{args.pred}/{model_name}/{args.ini_size}/{int(args.KV_class3 * 100)}")
