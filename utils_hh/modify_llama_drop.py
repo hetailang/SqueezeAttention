@@ -522,7 +522,7 @@ class LlamaModel_squeeze(LlamaPreTrainedModel):
             prompt_len = len(hidd_data[0])
             hidd_data = [float(torch.mean(hidd_data[i])) for i in hidd_data]
             hidd_data = np.array(hidd_data)
-            hidd_data[1] = max(0.9, hidd_data[1])
+           #  hidd_data[1] = max(0.9, hidd_data[1])
             X = hidd_data.reshape(-1, 1)
             kmeans = KMeans(n_clusters=3)
             kmeans.fit(X)
