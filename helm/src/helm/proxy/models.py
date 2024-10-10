@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Dict, Optional
+from collections import defaultdict
 
 # Different modalities
 TEXT_MODEL_TAG: str = "text"
@@ -887,6 +888,15 @@ ALL_MODELS = [
 
 MODEL_NAME_TO_MODEL: Dict[str, Model] = {model.name: model for model in ALL_MODELS}
 
+# Precompute models by tag for faster lookup
+MODELS_BY_TAG = defaultdict(list)
+MODELS_BY_ORGANIZATION = defaultdict(list)
+
+for model in ALL_MODELS:
+    for tag in model.tags:
+        MODELS_BY_TAG[tag].append(model.name)
+    MODELS_BY_ORGANIZATION[model.organization].append(model.name)
+
 
 def get_model(model_name: str) -> Model:
     """Get the `Model` given the name."""
@@ -911,12 +921,12 @@ def get_models_by_organization(organization: str) -> List[str]:
     """
     Gets models by organization e.g., ai21 => ai21/j1-jumbo, ai21/j1-grande, ai21-large.
     """
-    return [model.name for model in ALL_MODELS if model.organization == organization]
+    return MODELS_BY_ORGANIZATION.get(organization, [])
 
 
 def get_model_names_with_tag(tag: str) -> List[str]:
     """Get all the name of the models with tag `tag`."""
-    return [model.name for model in ALL_MODELS if tag in model.tags]
+    return MODELS_BY_TAG.get(tag, [])
 
 
 def get_all_text_models() -> List[str]:
